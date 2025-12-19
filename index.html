@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO 및 메타 데이터 -->
+    <meta name="description" content="AIoT 기반 스마트 위생 수거 솔루션 및 환경 데이터 전문 기업, (주)더림스이엔브이">
+    <meta name="keywords" content="더림스이엔브이, AIoT, 스마트시티, 음식물쓰레기, 환경데이터, ESG, ODA">
+    <meta name="author" content="The Lim's ENV">
+    
+    <!-- Open Graph (SNS 공유 시 보여질 정보) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="(주)더림스이엔브이 - 도시 위생 AIoT 솔루션">
+    <meta property="og:description" content="탈탄소 & 재순환의 가치를 실현하는 스마트 환경 기술(ET) 전문 기업">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://www.thelims.kr">
+
+    <title>(주)더림스이엔브이 - The Lim's ENV</title>
+
+    <!-- 스타일시트 및 폰트 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Favicon (로고 파일이 있다면 경로를 맞춰주세요) -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; }
+        
+        /* Hero Section Background */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .scroll-smooth { scroll-behavior: smooth; }
+        
+        /* Fade In Animation for Hero Text */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-gray-800 scroll-smooth antialiased">
+
+    <!-- ============================================ -->
+    <!-- Navigation Section                           -->
+    <!-- ============================================ -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- 로고 영역 -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="location.href='#'">
+                    <!-- 텍스트 로고 -->
+                    <span class="text-2xl font-bold text-green-700 tracking-tighter hover:text-green-800 transition">The Lim's ENV</span>
+                    <!-- 이미지 로고 사용 시 주석 해제 후 사용 -->
+                    <!-- <img src="logo.png" alt="The Lim's ENV Logo" class="h-10"> -->
+                </div>
+                
+                <!-- 데스크탑 메뉴 -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">About</a>
+                    <a href="#business" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">Business</a>
+                    <a href="#contact" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">Contact</a>
+                </div>
+
+                <!-- 모바일 햄버거 버튼 -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none p-2 transition duration-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모바일 메뉴 드롭다운 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#home" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 transition">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 transition">About</a>
+                <a href="#business" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 transition">Business</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-green-600 hover:bg-green-50 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- Hero Section                                 -->
+    <!-- ============================================ -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl mx-auto animate-fade-in-up">
+            <span class="inline-block py-1 px-4 rounded-full bg-green-600/90 text-sm font-semibold mb-6 backdrop-blur-md border border-green-400/30">
+                AIoT Smart Environment Solution
+            </span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
+                도시의 위생을 책임지는<br>
+                <span class="text-green-400">데이터 기반 솔루션</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 font-light text-gray-100 px-2 max-w-2xl mx-auto drop-shadow-md">
+                탈탄소 & 재순환의 가치를 실현하는<br class="md:hidden"> 스마트 환경 기술(ET) 전문 기업
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#business" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-1">
+                    솔루션 보기
+                </a>
+                <a href="#contact" class="bg-white/10 hover:bg-white/20 text-white border border-white/40 font-bold py-3.5 px-8 rounded-full transition duration-300 backdrop-blur-md">
+                    문의하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- About Section                                -->
+    <!-- ============================================ -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-bold tracking-wider uppercase text-sm">Who We Are</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">혁신 기술로 환경 난제를 해결합니다</h2>
+                <div class="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+                <p class="mt-8 text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    (주)더림스이엔브이는 <strong>환경(Bio)</strong>과 <strong>기술(AI)</strong>의 융합을 통해 도시 위생 인프라의 새로운 표준을 만듭니다.
+                    음식물쓰레기의 악취·해충 문제를 해결하고, 축적된 환경 데이터를 통해 지속 가능한 순환 경제를 선도합니다.
+                </p>
+            </div>
+            
+            <!-- 카드 그리드 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition duration-300">
+                        <i class="fas fa-microchip text-2xl text-green-600 group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">AIoT 융합 기술</h3>
+                    <p class="text-gray-600 leading-relaxed">Edge AI 기반의 실시간 환경 분석 및<br>최적 제어 시스템 구축</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition duration-300">
+                        <i class="fas fa-database text-2xl text-green-600 group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">환경 데이터 분석</h3>
+                    <p class="text-gray-600 leading-relaxed">미세 기상 및 악취 데이터 수집/가공을<br>통한 스마트 시티 솔루션 제공</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 transition duration-300">
+                        <i class="fas fa-globe-asia text-2xl text-green-600 group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">글로벌 ODA</h3>
+                    <p class="text-gray-600 leading-relaxed">베트남 등 아세안 국가 현지 맞춤형<br>위생 인프라 구축 및 확장</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- Business Section                             -->
+    <!-- ============================================ -->
+    <section id="business" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="text-green-600 font-bold tracking-wider uppercase text-sm">Our Business</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">핵심 사업 분야</h2>
+                <div class="w-16 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Track 1: 스마트 위생 관리 -->
+            <div class="flex flex-col md:flex-row items-center mb-24 gap-12">
+                <div class="w-full md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group h-[300px] md:h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Smart Waste Bin" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <p class="text-sm font-semibold uppercase tracking-wider mb-1 text-green-300">Solution</p>
+                            <h4 class="text-2xl font-bold">Smart Hygiene System</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold mb-4">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>CORE BUSINESS
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">스마트 위생 관리 솔루션 (APO-1)</h3>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        도시의 고질적인 악취와 해충 민원을 해결하는 AI 기반 지능형 케어 시스템입니다. 기존 인프라에 부착하거나 올인원 장비로 도입 가능합니다.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i>
+                            <div>
+                                <strong class="block text-gray-900 text-lg mb-1">APO-Kit (국내용)</strong>
+                                <span class="text-gray-600">기존 RFID 장비에 부착하여 즉각적인 악취 차단 효과를 제공하는 위생 케어 모듈</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i>
+                            <div>
+                                <strong class="block text-gray-900 text-lg mb-1">All-in-One (해외용)</strong>
+                                <span class="text-gray-600">수거+위생+자원화 기능을 통합한 ODA 및 해외 수출용 스마트 장치</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track 2: 환경 데이터 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group h-[300px] md:h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Data Analysis" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <p class="text-sm font-semibold uppercase tracking-wider mb-1 text-blue-300">Data</p>
+                            <h4 class="text-2xl font-bold">Environmental Analytics</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-bold mb-4">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>DATA SOLUTION
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">환경 데이터 수집 및 가공</h3>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                        도시 곳곳의 인프라를 통해 수집된 미세 환경 데이터를 분석하여 스마트 시티 최적화를 위한 데이터 가치를 창출합니다.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
+                            <i class="fas fa-chart-line text-blue-500 mt-1 mr-3 text-lg"></i>
+                            <div>
+                                <strong class="block text-gray-900 text-lg mb-1">Micro-Climate Data</strong>
+                                <span class="text-gray-600">공공 데이터가 놓치는 국지적 온습도 및 악취 이동 경로 데이터 수집</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-100">
+                            <i class="fas fa-server text-blue-500 mt-1 mr-3 text-lg"></i>
+                            <div>
+                                <strong class="block text-gray-900 text-lg mb-1">Data Voucher</strong>
+                                <span class="text-gray-600">수요 기업 맞춤형 환경 데이터 전처리 및 AI 학습용 데이터 가공 서비스</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- Contact Section                              -->
+    <!-- ============================================ -->
+    <section id="contact" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+        <!-- 배경 데코레이션 -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-green-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+                더림스이엔브이와 함께 지속 가능한 미래를 만들어가세요.<br>
+                기술 협력, 제품 문의, 데이터 구매 등 언제든 환영합니다.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- 이메일 -->
+                <a href="mailto:env@thelims.kr" class="p-8 bg-gray-800/50 backdrop-blur-sm rounded-2xl hover:bg-gray-700/80 transition duration-300 border border-gray-700 group flex flex-col items-center">
+                    <div class="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-600 transition duration-300">
+                        <i class="fas fa-envelope text-2xl text-green-500 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-lg">Email</h4>
+                    <p class="text-gray-300 group-hover:text-white transition">env@thelims.kr</p>
+                </a>
+                
+                <!-- 전화번호 -->
+                <div class="p-8 bg-gray-800/50 backdrop-blur-sm rounded-2xl hover:bg-gray-700/80 transition duration-300 border border-gray-700 group flex flex-col items-center">
+                    <div class="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-600 transition duration-300">
+                        <i class="fas fa-phone text-2xl text-green-500 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-lg">Phone</h4>
+                    <p class="text-gray-300 group-hover:text-white transition">02-2070-5656</p>
+                </div>
+                
+                <!-- 주소 -->
+                <div class="p-8 bg-gray-800/50 backdrop-blur-sm rounded-2xl hover:bg-gray-700/80 transition duration-300 border border-gray-700 group flex flex-col items-center">
+                    <div class="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-600 transition duration-300">
+                        <i class="fas fa-map-marker-alt text-2xl text-green-500 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-lg">Location</h4>
+                    <p class="text-gray-300 text-sm group-hover:text-white transition leading-relaxed">
+                        서울특별시 강서구 마곡중앙로 59-17<br>류마타워 2차 411호
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-20 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p class="mb-2 md:mb-0">&copy; 2025 The Lim's ENV Co., Ltd. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <span>Business License: 123-45-67890</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        // 햄버거 버튼 클릭
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // 링크 클릭 시 메뉴 닫기
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
